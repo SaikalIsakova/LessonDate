@@ -12,17 +12,17 @@ public class Task2 {
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat("MM/dd/yyyy");
         Date date1;
 
-        {
+
             try {
                 date1 = simpleDateFormat.parse(start_date);
             } catch (ParseException e) {
                 throw new RuntimeException(e);
             }
-        }
+
 
         Date date2;
 
-        {
+
             try {
                 date2 = simpleDateFormat.parse(end_date);
             } catch (ParseException e) {
@@ -35,4 +35,3 @@ public class Task2 {
             System.out.println("Количество дней между датами = "+countOfDays);
         }
     }
-}

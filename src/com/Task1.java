@@ -12,16 +12,19 @@ public class Task1 {
         Date []dates=new Date[3];
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         for (int i = 0; i < dates.length; i++) {
+            Date inputDate = null;
+            while (true){
             String inputDates = sc.next();
-            Date inputDate;
+
             try {
                 inputDate = dateFormat.parse(inputDates);
-
+                break;
             } catch (ParseException e) {
-                throw new RuntimeException(e);
+                System.out.println("Введите корректные двнные");
+                continue;
             }
-            dates[i] = inputDate;
         }
+            dates[i] = inputDate;}
 
         for (int i = 0; i < dates.length; i++) {
             dateFormat.format(dates[i]);

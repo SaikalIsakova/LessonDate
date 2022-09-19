@@ -16,15 +16,19 @@ public class Task3 {
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
+
+        Date inputDate;
+        while (true){
         System.out.println("Введите дату");
         String inputDates=sc.next();
-        Date inputDate;
         try {
             inputDate = dateFormat.parse(inputDates);
+            break;
 
         } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
+            System.out.println("Введите корректные данные");
+            continue;
+        }}
 
         int a= inputDate.compareTo(date);
         switch (a){
