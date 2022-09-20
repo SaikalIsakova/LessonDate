@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class Task1 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        Date date = new Date();
         Date []dates=new Date[3];
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         for (int i = 0; i < dates.length; i++) {
